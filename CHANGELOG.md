@@ -1,5 +1,9 @@
 # Community Traits Ported (OpenMW)
 
+## 1.1.11
+
+- The Wretched and The Weird: Changed Wretch to respect stats granted by abilities for improved compatibility with other mods
+
 ## 1.1.10
 
 - Merlord's Backgrounds: Fixed Escaped Slave and Famed Warrior using wrong settings in the code, which prevented slavers and rivals from spawning

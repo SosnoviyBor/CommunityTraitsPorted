@@ -113,6 +113,16 @@ While I can imagine alchemists making their tinctures alcoholic-based, it doesn'
 
 Starting with ~50-70 armor right off the bat is not a good balancing in my book.
 
+**The Wretched and the Weird > Wretch**
+
+> Abilities are treated as modifiers, making birthsigns actually affect your final stats
+
+In short, it's for mod compatibility.
+
+Base game treats fortify stat abilities as base stat increases instead of modifiers (light numbers). This causes issues with mods which apply them dynamically. Take, for example, [Sun's Dusk](https://www.nexusmods.com/morrowind/mods/57526): it gives you needs buffs and debuffs straight away, way before the trait has been picked. And when you pick Wretch at full needs, you suddenly get negative base stats when the buffs wear off. I assume now you see the issue.
+
+As a side effect it slightly buffs the background as a whole by un-invalidates your birthsign choice, but I'd say a net positive for the player agency and more natural for the logic of the game systems. Perhaps it even makes your birthsing choice harder by making many more of them way more impactful in the long run.
+
 </details>
 
 ## Installation
@@ -153,11 +163,6 @@ Compatible with basically any mods.
 
 Safe to install mid-playthrough. For updating check release details. Removing the mod might not revert all effects of the picked traits.
 
-### Known Issues
-
-[Natural Character Growth](https://www.nexusmods.com/morrowind/mods/57801)  
-You might end up starting your game at level higher than 1. I plan on fixing it in the future, but it will take some time.
-
 ### Supported mods
 
 **Green Pact (Merlord's) > Green pact-friendly foods**
@@ -190,6 +195,10 @@ You might end up starting your game at level higher than 1. I plan on fixing it 
 #### [Follower Detection Utils](https://www.nexusmods.com/morrowind/mods/58053)
 
 - **Rat King (Merlord's)** > Unlocks an option to stop hordes if you already have too many rats followeing you
+
+#### [Abilities Are Modifiers](https://www.nexusmods.com/morrowind/mods/57295)
+
+- **Wretch (Wretched)** > Leaves ability handling up to AAM instead of doing basically the same thing
 
 ## Recommended Mods
 

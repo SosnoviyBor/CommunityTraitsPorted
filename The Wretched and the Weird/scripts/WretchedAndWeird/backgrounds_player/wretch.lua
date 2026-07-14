@@ -14,53 +14,27 @@ local rewardGiven = false
 local stopLevelCheck
 
 local function setInitSkills()
-    local selfSkills = self.type.stats.skills
-    local selfAttrs = self.type.stats.attributes
-    local skills = {
-        acrobatics  = selfSkills.acrobatics(self),
-        alchemy     = selfSkills.alchemy(self),
-        alteration  = selfSkills.alteration(self),
-        armorer     = selfSkills.armorer(self),
-        athletics   = selfSkills.athletics(self),
-        axe         = selfSkills.axe(self),
-        block       = selfSkills.block(self),
-        bluntWeapon = selfSkills.bluntweapon(self),
-        conjuration = selfSkills.conjuration(self),
-        destruction = selfSkills.destruction(self),
-        enchant     = selfSkills.enchant(self),
-        handToHand  = selfSkills.handtohand(self),
-        heavyArmor  = selfSkills.heavyarmor(self),
-        illusion    = selfSkills.illusion(self),
-        lightArmor  = selfSkills.lightarmor(self),
-        longBlade   = selfSkills.longblade(self),
-        marksman    = selfSkills.marksman(self),
-        mediumArmor = selfSkills.mediumarmor(self),
-        mercantile  = selfSkills.mercantile(self),
-        mysticism   = selfSkills.mysticism(self),
-        restoration = selfSkills.restoration(self),
-        security    = selfSkills.security(self),
-        shortBlade  = selfSkills.shortblade(self),
-        sneak       = selfSkills.sneak(self),
-        spear       = selfSkills.spear(self),
-        speechcraft = selfSkills.speechcraft(self),
-        unarmored   = selfSkills.unarmored(self),
-    }
-    local attrs = {
-        agility      = selfAttrs.agility(self),
-        endurance    = selfAttrs.endurance(self),
-        intelligence = selfAttrs.intelligence(self),
-        luck         = selfAttrs.luck(self),
-        personality  = selfAttrs.personality(self),
-        speed        = selfAttrs.speed(self),
-        strength     = selfAttrs.strength(self),
-        willpower    = selfAttrs.willpower(self),
-    }
+    local aamNotInstalled = not core.contentFiles.has("AbilitiesAreModifiers.omwscripts")
+    local selfEffects = self.type.activeEffects(self)
 
-    for _, skill in pairs(skills) do
+    for name, handler in pairs(self.type.stats.skills) do
+        local skill = handler(self)
         skill.base = math.min(skill.base, 15)
+
+        if aamNotInstalled then
+            local effect = selfEffects:getEffect(core.magic.EFFECT_TYPE.FortifySkill, name)
+            skill.base = skill.base + effect.magnitude
+        end
     end
-    for _, attr in pairs(attrs) do
+
+    for name, handler in pairs(self.type.stats.attributes) do
+        local attr = handler(self)
         attr.base = math.min(attr.base, 10)
+
+        if aamNotInstalled then
+            local effect = selfEffects:getEffect(core.magic.EFFECT_TYPE.FortifyAttribute, name)
+            attr.base = attr.base + effect.magnitude
+        end
     end
 end
 
