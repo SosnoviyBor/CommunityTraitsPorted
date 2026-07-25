@@ -1,5 +1,9 @@
 # Community Traits Ported (OpenMW)
 
+## 1.1.12
+
+- Merlord's Backgrounds: Fixed Framed's bounty timer triggering every save reload instead of once per character. Alternatively known as: "Whoops, all crimes!"
+
 ## 1.1.11
 
 - The Wretched and The Weird: Changed Wretch to respect stats granted by abilities for improved compatibility with other mods

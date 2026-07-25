@@ -27,8 +27,7 @@ I.CharacterTraits.addTrait {
         skills.handtohand(self).base = skills.handtohand(self).base + 10
         skills.mercantile(self).base = skills.mercantile(self).base + 10
         skills.speechcraft(self).base = skills.speechcraft(self).base + 10
-    end,
-    onLoad = function()
+        
         core.sendGlobalEvent("MerlordsTraits_registerFramed", self)
     end,
 }
