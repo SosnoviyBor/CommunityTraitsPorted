@@ -1,5 +1,9 @@
 # Community Traits Ported (OpenMW)
 
+## 1.1.13
+
+- Sage's Backgrounds: Fixed a typo in Slayer's description
+
 ## 1.1.12
 
 - Merlord's Backgrounds: Fixed Framed's bounty timer triggering every save reload instead of once per character. Alternatively known as: "Whoops, all crimes!"

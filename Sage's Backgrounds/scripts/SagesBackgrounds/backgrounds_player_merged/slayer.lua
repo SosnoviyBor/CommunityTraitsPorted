@@ -11,7 +11,7 @@ I.CharacterTraits.addTrait {
     name = "Slayer",
     description = (
         "Into every generation, a Slayer is born: one being in all the world, " ..
-        "a chosen one. They alone will weild the strength and skill to fight " ..
+        "a chosen one. They alone will wield the strength and skill to fight " ..
         "the vampires, daedra, and forces of darkness; to stop the spread of their " ..
         "evil and the swell of their number. You are the Slayer. " ..
         "Bearing both a blessing and a curse, " ..
